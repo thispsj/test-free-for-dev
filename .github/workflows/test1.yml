@@ -1,0 +1,10 @@
+name: Page Build Test
+on: page_build
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo $URL'
+        env:
+          URL: ${{ github.event.page.html_url }}
