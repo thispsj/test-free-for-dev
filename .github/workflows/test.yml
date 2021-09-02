@@ -1,0 +1,10 @@
+name: PR Comment Test
+on: issue_comment
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ' echo $BODY '
+        env:
+          BODY: ${{ github.event }}
